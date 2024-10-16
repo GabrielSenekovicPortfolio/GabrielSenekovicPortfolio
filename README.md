@@ -7,9 +7,8 @@
 </head>
 <body>
     <nav class="navbar">
-            <a href="/index.html" class="nav-item">Home</a>
-            <a href="/about/about.md" class="nav-item">About</a>
-            <a href="/gallery.html" class="nav-item">Gallery</a>
+            <a href="README.md" class="nav-item">Home</a>
+            <a href="about/about.md" class="nav-item">About</a>
             <div class="dropdown">
                 <button class="dropbtn">More</button>
                 <div class="dropdown-content">
@@ -17,6 +16,12 @@
                     <a href="/projects.html">Projects</a>
                 </div>
             </div>
+            <div class="dropdown">
+                <button class="dropbtn">More</button>
+                <div class="dropdown-content">
+                    <a href="/contact.html">Contact</a>
+                    <a href="/projects.html">Projects</a>
+                </div>
         </nav>
     
     <h1>Welcome to My Website</h1>
