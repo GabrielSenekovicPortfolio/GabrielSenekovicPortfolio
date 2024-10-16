@@ -1,2 +1,8 @@
-Welcome to My Website
-This is the home page
+---
+layout: default
+title: About Me
+---
+
+# Main Page
+
+Welcome to the main page
