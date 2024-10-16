@@ -11,8 +11,7 @@
     <p>This is the home page.</p>
     
     <!-- Link to another page -->
-    <a href="about/about.md">About Page</a>
+    <a href="about/about.html">About Page</a>
 
-</footer>
 </body>
 </html>
