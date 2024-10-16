@@ -29,5 +29,14 @@
     
     <!-- Link to another page -->
     <a href="about/about.md">About Page</a>
+
+    <footer class="footer">
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+    <p>
+        <a href="https://github.com/yourusername">GitHub</a> |
+        <a href="https://twitter.com/yourusername">Twitter</a> |
+        <a href="contact.html">Contact</a>
+    </p>
+</footer>
 </body>
 </html>
