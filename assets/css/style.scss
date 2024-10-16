@@ -2,3 +2,30 @@
 ---
 
 @import "{{ site.theme }}";
+
+/* Background gradient */
+body {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Link styling */
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+a:hover {
+    color: #ff5722;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #d32f2f;
+}
