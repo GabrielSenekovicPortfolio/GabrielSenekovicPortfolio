@@ -5,9 +5,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-   
+   <div class="content" style="padding-top: 60px;">
+    <h1>Welcome to My Website</h1>
     <p>This is the home page.</p>
-    
+    </div>
     <!-- Link to another page -->
     <a href="about/about.html">About Page</a>
 </body>
