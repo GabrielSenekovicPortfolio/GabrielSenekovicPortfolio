@@ -9,7 +9,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    margin-top: 100x;
+    margin-top: 50x;
+    padding-top: 60x;
 }
 /* Link styling */
 a {
@@ -36,6 +37,8 @@ a:active {
     position: fixed; /* Stays at the top of the page */
     top: 0;
     width: 100%; /* Full width */
+    z-index: 1000; /* Ensure navbar is on top */
+    height: 60px; /* Set a specific height for the navbar */
 }
 
 /* Navbar links */
