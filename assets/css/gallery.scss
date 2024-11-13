@@ -1,0 +1,51 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0; /* No spacing between items */
+    padding: 0; /* Remove padding around the grid */
+}
+
+.gallery-item {
+    background-color: #f0f0f0;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* other styles as needed */
+}
+/* Alternate background colors for chessboard effect */
+.gallery-item:nth-child(odd) {
+    background-color: #e0e0e0; /* Slightly darker shade for the "checker" look */
+}
+
+/* Hover effect (optional) */
+.gallery-item:hover {
+    background-color: #d4d4d4; /* Slightly darken on hover for visual feedback */
+}
+
+/* Pixel Art Styling */
+.gallery-item img {
+    width: 80%; /* Scales image within each cell */
+    height: auto;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+/* Optional caption styling (place below images) */
+.gallery-item h4 {
+    font-size: 0.8em;
+    color: #333;
+    margin-top: 8px;
+}
+
+.gallery-wrapper.page2-layout {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
