@@ -1,5 +1,5 @@
 <div class="content-box">
-    <img src="/assets/images/Set in Stone/Title.png" alt="Yarn Knight Logo">
+    <img src="{{ site.baseurl }}/assets/images/Set in Stone/Title.png" alt="Yarn Knight Logo">
     <h2>Description</h2>
     <div>In the second year of university, we were tasked with making a Vertical Slice for the end-of-the-year project. A Vertical Slice is like a tiny portion of a game that you polish as much as possible, in order to showcase what the game could be.
 
