@@ -6,6 +6,6 @@ title: "Tags"
 <ul>
   {% assign tags = site.posts | map: "tags" | join: "," | split: "," | uniq %}
   {% for tag in tags %}
-    <li><a href="{{ site.baseurl }}/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+    <li><a href="{{ site.baseurl }}/tags/{{ tag | slugify }}">{{ tag }}</a></li>
   {% endfor %}
 </ul>
