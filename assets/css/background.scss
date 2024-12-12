@@ -5,10 +5,13 @@
 
 /* Background gradient */
 body {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: linear-gradient(135deg, #F2F7CD, #B2F9D6, #247CC7, #963281);
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     margin-top: 50x;
     padding-top: 200x;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

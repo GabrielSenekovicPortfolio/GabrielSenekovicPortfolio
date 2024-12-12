@@ -1,0 +1,92 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Sidebar layout */
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #99417e;
+    padding-top: 100px;
+    text-align: center;
+    border-left: 10px solid #e7ff8f;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.year-toggle {
+    cursor: pointer;
+    background-color: #6f2659;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 5px; /* Adds spacing around the text */
+    display: block; /* Ensures it's treated as a block element */
+    color: #ffffff;
+}
+
+/* Month toggle button */
+.month-toggle {
+    cursor: pointer;
+    font-weight: bold;
+    display: block; /* Ensures it's treated as a block element */
+    color: #ffffff;
+}
+
+/* Hide months and posts by default */
+.month-list {
+    display: none; /* Ensure all months are visible */
+    text-align: left;
+}
+
+.post-list {
+    display: none;
+}
+
+/* Show months or posts when the class is applied */
+.month-list.show,
+.post-list.show {
+    display: block;
+}
+
+/* Sidebar styling */
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+/* Links styling */
+.sidebar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Month group styling */
+.month-group {
+    margin-left: 20px;
+}
+
+.month-group h4 {
+    margin-top: 10px;
+}
+
+.month-group ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}

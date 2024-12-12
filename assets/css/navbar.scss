@@ -5,7 +5,8 @@
 
 .navbar {
     overflow: visible;
-    background-color: #333; /* Dark background */
+    background-color: #419995; /* Dark background */
+    border-bottom: 10px solid #e7ff8f;
     position: fixed; /* Stays at the top of the page */
     top: 0;
     width: 100%; /* Full width */
@@ -15,7 +16,6 @@
 
 /* Navbar links */
 .navbar .nav-item {
-    float: left;
     display: inline-block;
     color: white;
     text-align: center;
@@ -26,6 +26,6 @@
 
 /* Change color on hover */
 .navbar .nav-item:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #692954;
+    color: rgb(255, 255, 255);
 }

@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/footer.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/dropdown.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/background.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/contentbox.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/sidebar.css">
     <script src="/assets/scripts/gallery.js"></script>
+    <script src="/assets/scripts/sidebar.js"></script>
 </head>
 <body>
 
@@ -33,13 +36,49 @@
                 <a href="{{ site.baseurl }}/pages/pixelart.html">Portfolio</a>
             </div>
         </div>
+        <a href="{{ site.baseurl }}/pages/blog.html" class="nav-item">Blog</a>
     </nav>
 
     <!-- Page content will be inserted here -->
-    <div class="content">
-        {{ content }}
+    <div class="main-container">
+        <div class="main-content">
+            {{ content }}
+        </div>
+    
+        
     </div>
-
+    <!-- Sidebar (conditionally displayed) -->
+    {% if page.sidebar == true %}
+<aside class="sidebar">
+    <h2>Blog Entries</h2>
+        {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+        {% for year_group in posts_by_year %}
+            <h3 class="year-toggle">{{ year_group.name }}</h3> <!-- Year Header -->
+            <div class="month-list">
+                {% assign posts_by_month = year_group.items | group_by_exp: "post", "post.date | date: '%B'" %}
+                {% for month_group in posts_by_month %}
+                    <div class="month-group">
+                        <h4 class="month-toggle">{{ month_group.name }}</h4> <!-- Month Header -->
+                        <div class="post-list">
+                            <ul>
+                                {% for post in site.posts %}
+                                   <li>
+                                    <a href="{{ post.url }}">
+                                      {{ post.title }} - 
+                                      {{ post.date | date: '%d' }}{% if day == '1' or day == '21' or day == '31' %}st{% elsif day == '2' or day == '22' %}nd{% elsif day == '3' or day == '23' %}rd{% else %}th{% endif %}
+                                    </a>
+                                  </li>
+                                {% else %}
+                                  <li>No posts found.</li>
+                                {% endfor %}
+                              </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+</aside>
+{% endif %}
     <!-- Footer section -->
     <footer class="footer">
         <p>&copy; 2024 Gabriel Senekovic Åkerklint. All rights reserved.</p>
