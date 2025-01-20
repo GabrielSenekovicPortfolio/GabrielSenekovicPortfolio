@@ -63,7 +63,7 @@
                             <ul>
                                 {% for post in site.posts %}
                                    <li>
-                                    <a href="{{ post.url }}">
+                                    <a href="{{ site.baseurl }}{{ post.url }}">
                                       {{ post.title }} - 
                                       {{ post.date | date: '%d' }}{% if day == '1' or day == '21' or day == '31' %}st{% elsif day == '2' or day == '22' %}nd{% elsif day == '3' or day == '23' %}rd{% else %}th{% endif %}
                                     </a>
