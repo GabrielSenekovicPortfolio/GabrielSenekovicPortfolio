@@ -17,7 +17,6 @@ Previously, I could not figure out how to spawn entities when I also needed to u
 <br><br>
 <div class="box">
     <pre>
-        <code>
     public bool SpawnEntities(Entity prefab, Transform transform, int amount, out List<Entity> spawnedEntities)
         {
             Debug.Assert(prefab != null);
@@ -36,7 +35,6 @@ Previously, I could not figure out how to spawn entities when I also needed to u
             }
             return spawnedEntities.Count > 0;
         }
-        </code>
     </pre>
 </div>
 <br><br>
