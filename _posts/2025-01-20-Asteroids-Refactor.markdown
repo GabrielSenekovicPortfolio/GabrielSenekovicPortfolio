@@ -15,6 +15,8 @@ I was proud of what I accomplished in just two weeks, using concepts I just lear
 <br><br>
 Previously, I could not figure out how to spawn entities when I also needed to use injection. Zenject injects all components when the scene is loaded, so all dynamically spawned entities would be “empty”. It turns out that was very easily solvable, and thanks to one simple line of code I was able to load my entities from Addressables like I had originally intended.
 <br><br>
+<pre>
+    <code>
 public bool SpawnEntities(Entity prefab, Transform transform, int amount, out List<Entity> spawnedEntities)
     {
         Debug.Assert(prefab != null);
@@ -33,6 +35,8 @@ public bool SpawnEntities(Entity prefab, Transform transform, int amount, out Li
         }
         return spawnedEntities.Count > 0;
     }
+    </code>
+</pre>
 <br><br>
 It’s this simple. This function is within the installer class, and if I call this from anywhere using either an injected installer or a singleton pattern, suddenly it’s very easy to spawn entities that require injections. Do note however, that I don’t think this uses Zenject’s factories, and that’s where I suspect I probably still have missed something. Previously, I had resorted to having all enemies spawned in at the start, and simply making them go invisible when hit.
 <br><br>
