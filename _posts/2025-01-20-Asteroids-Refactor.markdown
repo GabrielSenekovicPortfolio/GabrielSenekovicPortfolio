@@ -15,7 +15,7 @@ I was proud of what I accomplished in just two weeks, using concepts I just lear
 <br><br>
 Previously, I could not figure out how to spawn entities when I also needed to use injection. Zenject injects all components when the scene is loaded, so all dynamically spawned entities would be “empty”. It turns out that was very easily solvable, and thanks to one simple line of code I was able to load my entities from Addressables like I had originally intended.
 <br><br>
-<div class="box">
+<div class="code-box">
     <pre>
     public bool SpawnEntities(Entity prefab, Transform transform, int amount, out List&lt;Entity&lt; spawnedEntities)
         {
