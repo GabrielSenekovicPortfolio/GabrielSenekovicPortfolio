@@ -17,10 +17,10 @@ Previously, I could not figure out how to spawn entities when I also needed to u
 <br><br>
 <div class="box">
     <pre>
-    public bool SpawnEntities(Entity prefab, Transform transform, int amount, out List<Entity> spawnedEntities)
+    public bool SpawnEntities(Entity prefab, Transform transform, int amount, out List&lt;Entity&lt; spawnedEntities)
         {
             Debug.Assert(prefab != null);
-            spawnedEntities = new List<Entity>();
+            spawnedEntities = new List&lt;Entity&lt;();
             for(int i = 0; i < amount; i++)
             {
                 GameObject newEntity = Container.InstantiatePrefab(prefab, transform);
