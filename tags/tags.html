@@ -11,7 +11,7 @@ permalink: /tags/
     <ul>
         {% for tag in all_tags %}
             <li>
-                <a href="{{ site.baseurl }}/tags/{{ tag[0] | slugify }}/">
+                <a href="{{ site.baseurl }}/tags/{{ tag[0] | slugify }}">
                     {{ tag[0] }} ({{ tag[1].size }})
                 </a>
             </li>
