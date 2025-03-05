@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Global game jam 2025"
-date:   2025-01-20 15:59:54 +0100
+date:   2025-01-05 15:59:54 +0100
 categories: general
 sidebar: true
-tags: [game jam], [ggj]
+tags: [gamejam, ggj]
 ---
 <div class="content-box">
 Hello!

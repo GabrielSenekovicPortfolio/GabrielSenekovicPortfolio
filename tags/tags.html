@@ -1,0 +1,22 @@
+---
+layout: default
+title: "Blog Tags"
+permalink: /tags/
+---
+
+<h1>All Tags</h1>
+
+{% assign all_tags = site.tags | sort %}
+{% if all_tags.size > 0 %}
+    <ul>
+        {% for tag in all_tags %}
+            <li>
+                <a href="{{ site.baseurl }}/tags/{{ tag[0] | slugify }}/">
+                    {{ tag[0] }} ({{ tag[1].size }})
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No tags found. Make sure your posts have tags in the front matter.</p>
+{% endif %}

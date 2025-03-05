@@ -39,7 +39,7 @@
         <a href="{{ site.baseurl }}/pages/blog.html" class="nav-item">Blog</a>
     </nav>
 
-    <!-- Page content will be inserted here -->
+    <!-- Page content -->
     <div class="main-container">
         <div class="main-content">
             {{ content }}
@@ -47,7 +47,7 @@
     
         
     </div>
-    <!-- Sidebar (conditionally displayed) -->
+    <!-- Sidebar -->
     {% if page.sidebar == true %}
 <aside class="sidebar">
     <h2>Blog Entries</h2>
@@ -61,7 +61,7 @@
                         <h4 class="month-toggle">{{ month_group.name }}</h4> <!-- Month Header -->
                         <div class="post-list">
                             <ul>
-                                {% for post in site.posts %}
+                                {% for post in month_group.items %}
                                    <li>
                                     <a href="{{ site.baseurl }}{{ post.url }}">
                                       {{ post.title }} - 
