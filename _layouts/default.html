@@ -16,8 +16,6 @@
     <script src="{{ site.baseurl }}/assets/scripts/sidebar.js"></script>
 </head>
 <body>
-
-    <!-- Navigation bar -->
     <nav class="navbar">
         <a href="{{ site.baseurl }}/index.html" class="nav-item">Home</a>
         <a href="{{ site.baseurl }}/about/about.html" class="nav-item">About</a>
@@ -39,7 +37,6 @@
         <a href="{{ site.baseurl }}/pages/blog.html" class="nav-item">Blog</a>
     </nav>
 
-    <!-- Page content -->
     <div class="main-container">
         <div class="main-content">
             {{ content }}
@@ -47,7 +44,6 @@
     
         
     </div>
-    <!-- Sidebar -->
     {% if page.sidebar == true %}
 <aside class="sidebar">
     <h2>Blog Entries</h2>
@@ -59,7 +55,7 @@
                 {% for month_group in posts_by_month %}
                     <div class="month-group">
                         <h4 class="month-toggle">{{ month_group.name }}</h4> <!-- Month Header -->
-                        <div class="post-list">
+                        <div class="post-list-retractable">
                             <ul>
                                 {% for post in month_group.items %}
                                    <li>
@@ -84,10 +80,12 @@
 {% endif %}
     <!-- Footer section -->
     <footer class="footer">
-        <p>&copy; 2024 Gabriel Senekovic Åkerklint. All rights reserved.</p>
+        <p>&copy; 2025 Gabriel Senekovic Åkerklint. All rights reserved.</p>
         <p>
-            <a href="https://github.com/GabrielSenekovicPortfolio">GitHub</a> |
-            <a href="https://twitter.com/DevelopmentShou">Twitter</a>
+            <div class="content-box">
+                <a href="https://github.com/GabrielSenekovicPortfolio">GitHub</a> |
+                <a href="https://twitter.com/DevelopmentShou">Twitter</a>
+            </div>
         </p>
     </footer>
 

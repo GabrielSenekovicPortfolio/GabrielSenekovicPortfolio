@@ -1,0 +1,16 @@
+---
+layout: default
+title: "Posts tagged Civ Clone"
+tag: civclone
+---
+<h2>Posts tagged "{{ page.tag }}"</h2>
+Currently this tag is called "civ clone", until I can figure out a better name for the game. Since the game isn't currently 
+a development focus as of July 2025, it might not get named for a while.
+<br><br>
+<ul>
+  {% for post in site.posts %}
+    {% if post.tags contains page.tag %}
+      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>

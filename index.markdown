@@ -11,6 +11,7 @@ layout: home
                     <h2 class="post-list-heading">Welcome to the main page of Gabriel Senekovic's Portfolio!</h2>
                     The important links can be found above, but below I got a gallery of highlights.
                 </div>
+                <br> <br>
                 <div class="content-box">
                     <h2 class="post-list-heading">Project Highlights</h2>
                     <h2>Sample Gallery</h2>
