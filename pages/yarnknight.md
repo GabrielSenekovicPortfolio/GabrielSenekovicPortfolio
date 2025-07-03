@@ -6,6 +6,7 @@
 I also looked further into Unity’s shader graph, and made both the vignette “in and out” effect when you win a level, as well as a palette swap shader, the effects of which you can witness as you go between worlds.
 
 Having an interest in Binding of Isaac, a twin stick shooter was something I was interested in tackling eventually, so this is my own example of this genre.
+<br><br>
 </div>
     <h2>Sample Gallery</h2>
     <div class="portfolio-grid">
@@ -34,4 +35,10 @@ Having an interest in Binding of Isaac, a twin stick shooter was something I was
             <p>A magical item sprite that adds charm to any RPG.</p>
         </div>
     </div>
+    <br><br>
+    <ul>
+        <li><a href="https://shoudoesgames.itch.io/yarn-knight" target="_blank" rel="noopener noreferrer">A link to the itch.io page</a></li>
+        <li><a href="{{ site.baseurl }}/pages/yarnknight_versionhistory.html">Version History</a></li>
+        <li><a href="{{ site.baseurl }}/tags/yarnknight.html">Blog posts</a></li>
+    </ul>
 </div>
