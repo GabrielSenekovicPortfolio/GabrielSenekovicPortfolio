@@ -13,3 +13,30 @@
 .social-media a img:hover {
     transform: scale(1.2); /* Slightly enlarge icon on hover */
 }
+.footer-box {
+    background-color: #69d0ff; /* Blue background color for the box */
+    border: 10px solid #5777ce; /* Pink outline */
+    border-radius: 20px; /* Curved corners */
+    padding: 20px; /* Inner padding */
+    text-align: center; /* Center text and content */
+    margin-bottom: 0px;
+    max-width: 100%; /* Adjust width as needed */
+    width: 90%; /* Ensures it is responsive */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+.footer-box a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.footer-box a:visited {
+    color: var(--link-visited);
+}
+
+.footer-box a:hover {
+    color: var(--link-hover);
+}
+
+.footer-box a:active {
+    color: var(--link-active);
+}
