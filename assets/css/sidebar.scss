@@ -42,13 +42,27 @@
     text-align: left;
 }
 
-.post-list {
+.post-list-retractable { //For sidebar
     display: none;
+}
+
+.post-list{ //For main page
+    display:block !important;
+}
+.post-list li {
+    margin-bottom: 0em; /* Try 0.3em or even 0 if you want them tight */
+    padding: 0;
+    text-align: left;
+}
+.post-list h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2; /* Tighter line height */
 }
 
 /* Show months or posts when the class is applied */
 .month-list.show,
-.post-list.show {
+.post-list-retractable.show {
     display: block;
 }
 

@@ -3,21 +3,47 @@
 
 @import "{{ site.theme }}";
 
+:root {
+  --link-color: #b92dc1;
+  --link-hover: #ffb30f;
+  --link-visited: #551a8b;
+  --link-active: #d32f2f;
+}
+
+li {
+    text-align: left;
+}
+
 /* Link styling */
 a {
-    color: #1a73e8;
+    color: var(--link-color);
     text-decoration: none;
 }
 
 a:visited {
-    color: #551a8b;
+    color: var(--link-visited);
 }
 
 a:hover {
-    color: #ff5722;
-    text-decoration: underline;
+    color: var(--link-hover);
 }
 
 a:active {
-    color: #d32f2f;
+    color: var(--link-active);
+}
+.content-box a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.content-box a:visited {
+    color: var(--link-visited);
+}
+
+.content-box a:hover {
+    color: var(--link-hover);
+}
+
+.content-box a:active {
+    color: var(--link-active);
 }

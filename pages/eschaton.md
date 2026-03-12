@@ -5,5 +5,9 @@
 The game was conceived as a Terraria clone in a loose sense. I wanted to make a game using C++ and SDL for my portfolio to prove my ability to program in C++ for future job applications. At the same time, I was thinking about how Terraria could handle so many blocks at the same time in such a large world, which I wanted to try my hand at replicating. And so I got to work on this project.
 </div>
 <br><br>
-<a href="https://shoudoesgames.itch.io/eschaton" target="_blank" rel="noopener noreferrer">A link to the itch.io page.</a>
+<ul>
+    <li><a href="https://shoudoesgames.itch.io/eschaton" target="_blank" rel="noopener noreferrer">A link to the itch.io page</a></li>
+    <li><a href="{{ site.baseurl }}/pages/eschaton_versionhistory.html">Version History</a></li>
+    <li><a href="{{ site.baseurl }}/tags/eschaton.html">Blog posts</a></li>
+</ul>
 </div>

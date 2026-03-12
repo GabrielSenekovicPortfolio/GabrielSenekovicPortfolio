@@ -16,8 +16,6 @@
     <script src="{{ site.baseurl }}/assets/scripts/sidebar.js"></script>
 </head>
 <body>
-
-    <!-- Navigation bar -->
     <nav class="navbar">
         <a href="{{ site.baseurl }}/index.html" class="nav-item">Home</a>
         <a href="{{ site.baseurl }}/about/about.html" class="nav-item">About</a>
@@ -27,6 +25,7 @@
                 <a href="{{ site.baseurl }}/pages/yarnknight.html">Yarn Knight</a>
                 <a href="{{ site.baseurl }}/pages/eschaton.html">Eschaton</a>
                 <a href="{{ site.baseurl }}/pages/setinstone.html">Set in Stone</a>
+                <a href="{{ site.baseurl }}/pages/queercards.html">Queer Cards</a>
                 <a href="{{ site.baseurl }}/pages/other.html">Other</a>
             </div>
         </div>
@@ -37,10 +36,10 @@
             </div>
         </div>
         <a href="{{ site.baseurl }}/pages/blog.html" class="nav-item">Blog</a>
+        <a href="{{ site.baseurl }}/about/contact.html" class="nav-item">Contact</a>
         <a href="{{ site.baseurl }}/pages/chess.html" class="nav-item">Play Chess</a>
     </nav>
 
-    <!-- Page content -->
     <div class="main-container">
         <div class="main-content">
             {{ content }}
@@ -48,7 +47,6 @@
     
         
     </div>
-    <!-- Sidebar -->
     {% if page.sidebar == true %}
 <aside class="sidebar">
     <h2>Blog Entries</h2>
@@ -60,7 +58,7 @@
                 {% for month_group in posts_by_month %}
                     <div class="month-group">
                         <h4 class="month-toggle">{{ month_group.name }}</h4> <!-- Month Header -->
-                        <div class="post-list">
+                        <div class="post-list-retractable">
                             <ul>
                                 {% for post in month_group.items %}
                                    <li>
@@ -83,13 +81,19 @@
           </footer>
 </aside>
 {% endif %}
-    <!-- Footer section -->
     <footer class="footer">
-        <p>&copy; 2024 Gabriel Senekovic Åkerklint. All rights reserved.</p>
-        <p>
-            <a href="https://github.com/GabrielSenekovicPortfolio">GitHub</a> |
-            <a href="https://twitter.com/DevelopmentShou">Twitter</a>
-        </p>
+        <div class="footer-box">
+            <p>&copy; 2025 Gabriel Senekovic Åkerklint. All rights reserved.</p>
+            <p>
+                <a href="https://github.com/GabrielSenekovicPortfolio">GitHub</a> |
+                <a href="https://twitter.com/DevelopmentShou">Twitter</a> |
+                <a href="https://bsky.app/profile/shoudoesart.bsky.social">BlueSky</a> |
+                <a href="https://cupofshou.tumblr.com/">Tumblr</a> |
+                <a href="https://mastodon.social/@shoudoesart">Mastodon</a>|
+                <a href="https://ko-fi.com/shoudoesart">Ko-Fi</a> |
+                <a href="https://www.patreon.com/c/Shou867">Patreon</a>
+            </p>
+        </div>
     </footer>
 
 </body>
