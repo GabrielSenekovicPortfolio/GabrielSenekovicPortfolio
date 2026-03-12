@@ -1,0 +1,135 @@
+#gameWindow
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    border-color: rgb(44, 147, 167);
+    border-width: 5px;
+    border-style: solid;
+    padding: 50px;
+}
+
+#gameboard
+{
+    width: 320px;
+    height: 320px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    border-color: rgb(55, 59, 59);
+    border-width: 8px;
+    border-style: solid;
+}
+#player, #info-display {
+    margin-top: 15px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    min-height: 1.5em;
+}
+#info-display {
+    color: #d14747; 
+    font-size: 14px;
+}
+
+.board-layout {
+    display: grid;
+    grid-template-columns: 100px 320px 100px; 
+    align-items: center;
+    gap: 20px;
+}
+#reset-btn {
+    padding: 10px 20px;
+    background-color: rgb(44, 147, 167);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#reset-btn:hover {
+    background-color: #692954;
+}
+
+.side-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.square
+{
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.square svg 
+{
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    position: relative;
+}
+
+path
+{
+    position: relative;
+}
+.piece
+{
+    position: relative;
+}
+
+:root {
+    --white-square: rgb(104, 119, 160);
+    --black-square: rgb(80, 77, 109);
+}
+.white
+{
+    background-color: var(--white-square);
+}
+.black
+{
+    background-color: var(--black-square);
+}
+.blackPiece
+{
+    fill: black;
+    stroke: #fff;         
+    stroke-width: 20px;
+    stroke-linejoin: round;
+}
+.whitePiece
+{
+    fill: white;
+    stroke: #333;     
+    stroke-width: 20px;  
+    stroke-linejoin: round;
+}
+
+.square.valid-move::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    pointer-events: none;
+}
+.square.valid-move.contains-enemy::after {
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: 3px solid rgba(255, 0, 0, 0.3);
+}
