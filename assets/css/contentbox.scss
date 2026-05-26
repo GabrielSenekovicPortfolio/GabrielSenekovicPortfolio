@@ -3,45 +3,84 @@
 
 @import "{{ site.theme }}";
 
-.main-container { //To contain sidebar and main content
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents rogue elements from creating a horizontal scroll gap */
+}
+/* Mobile-First Layout Grid Wrapper */
+.main-container {
     display: flex;
-    align-items: flex-start; /* Aligns sidebar and content to the top */
-    justify-content: space-between;
-    padding: 20px;
+    flex-direction: column; /* Stack vertically on mobile */
+    align-items: center; 
+    justify-content: flex-start;
+    padding: 15px; /* Slightly tighter padding for small screens */
+    box-sizing: border-box;
 }
 
 .main-content {
-    padding-top: 60px; /* Navbar height offset */
-    //display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Ensures full viewport height */
-    max-width: 1000px;
-    width: 1000px
+    min-height: 100vh; 
+    width: 100%; /* Spans full width on mobile */
+    max-width: 1000px; /* Prevents it from getting too large on desktop */
+    box-sizing: border-box;
 }
 
 .content-box {
-    background-color: #69d0ff; /* Blue background color for the box */
-    border: 10px solid #5777ce; /* Pink outline */
-    border-radius: 20px; /* Curved corners */
-    padding: 40px; /* Inner padding */
-    text-align: center; /* Center text and content */
-    max-width: 100%; /* Adjust width as needed */
-    width: 90%; /* Ensures it is responsive */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    background-color: #69d0ff; 
+    border: 10px solid #5777ce; 
+    border-radius: 20px; 
+    padding: 20px; /* Reduced from 40px so text has room on mobile */
+    text-align: center; 
+    width: 100%; /* Standardize width usage */
+    max-width: 100%; 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); 
+    box-sizing: border-box;
 }
 
+/* Pixel Art Image Adjustments */
 .content-box img {
-    width: 80%;
+    width: 100%; /* Let it scale up to full content box width if needed */
+    max-width: 80%; /* Keeps original desktop scaling intent */
     height: auto;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
     -ms-interpolation-mode: nearest-neighbor;
 }
 
-.code-box 
-{
+.code-box {
     display: inline-block;
     text-align: left;
+    max-width: 100%; /* Prevents code blocks from breaking out of the box */
+    overflow-x: auto; /* Adds a minor scrollbar inside the code box if text is too long */
+}
+.home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This explicitly forces all children, including content-boxes, to center */
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+/* Desktop Overrides */
+@media (min-width: 768px) {
+    .main-container {
+        flex-direction: row; /* Side-by-side layout */
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .main-content {
+        width: 1000px; /* Restores your exact size requirement on large screens */
+    }
+
+    .content-box {
+        padding: 40px; /* More breathing room on desktop */
+    }
 }

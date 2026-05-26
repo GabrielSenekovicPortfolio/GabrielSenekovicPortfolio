@@ -1,4 +1,5 @@
-/<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@
     <script src="{{ site.baseurl }}/assets/scripts/sidebar.js"></script>
 </head>
 <body>
+<div class="column"></div>
     <nav class="navbar">
         <a href="{{ site.baseurl }}/index.html" class="nav-item">Home</a>
         <a href="{{ site.baseurl }}/about/about.html" class="nav-item">About</a>
@@ -40,47 +42,52 @@
         <a href="{{ site.baseurl }}/pages/chess.html" class="nav-item">Play Chess</a>
     </nav>
 
-    <div class="main-container">
-        <div class="main-content">
+    <div class="main-container {% if page.sidebar == true %}has-sidebar{% endif %}">
+        <main class="main-content">
             {{ content }}
-        </div>
+        </main>
     
-        
-    </div>
-    {% if page.sidebar == true %}
-<aside class="sidebar">
-    <h2>Blog Entries</h2>
-        {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-        {% for year_group in posts_by_year %}
-            <h3 class="year-toggle">{{ year_group.name }}</h3> <!-- Year Header -->
-            <div class="month-list">
-                {% assign posts_by_month = year_group.items | group_by_exp: "post", "post.date | date: '%B'" %}
-                {% for month_group in posts_by_month %}
-                    <div class="month-group">
-                        <h4 class="month-toggle">{{ month_group.name }}</h4> <!-- Month Header -->
-                        <div class="post-list-retractable">
-                            <ul>
-                                {% for post in month_group.items %}
-                                   <li>
-                                    <a href="{{ site.baseurl }}{{ post.url }}">
-                                      {{ post.title }} - 
-                                      {{ post.date | date: '%d' }}{% if day == '1' or day == '21' or day == '31' %}st{% elsif day == '2' or day == '22' %}nd{% elsif day == '3' or day == '23' %}rd{% else %}th{% endif %}
-                                    </a>
-                                  </li>
-                                {% else %}
-                                  <li>No posts found.</li>
-                                {% endfor %}
-                              </ul>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
+        {% if page.sidebar == true %}
+        <button class="sidebar-toggle-btn" id="sidebarToggle">📂 Entries</button>
+
+        <aside class="sidebar" id="blogSidebar">
+            <h2>Blog Entries</h2>
+            {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+            {% for year_group in posts_by_year %}
+                <h3 class="year-toggle">{{ year_group.name }}</h3>
+                <div class="month-list">
+                    {% assign posts_by_month = year_group.items | group_by_exp: "post", "post.date | date: '%B'" %}
+                    {% for month_group in posts_by_month %}
+                        <div class="month-group">
+                            <h4 class="month-toggle">{{ month_group.name }}</h4>
+                            <div class="post-list-retractable">
+                                <ul>
+    {% if month_group.items.size > 0 %}
+        {% for post in month_group.items %}
+            {% assign day = post.date | date: '%-d' %}
+            <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                    {{ post.title }} - 
+                    {{ post.date | date: '%d' }}{% if day == '1' or day == '21' or day == '31' %}st{% elsif day == '2' or day == '22' %}nd{% elsif day == '3' or day == '23' %}rd{% else %}th{% endif %}
+                </a>
+            </li>
         {% endfor %}
-        <footer class="sidebar-footer">
-            <a href="{{ site.baseurl }}/tags/tags.html">View all tags</a>
-          </footer>
-</aside>
-{% endif %}
+    {% else %}
+        <li>No posts found.</li>
+    {% endif %}
+</ul>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <footer class="sidebar-footer">
+                <a href="{{ site.baseurl }}/tags/tags.html">View all tags</a>
+            </footer>
+        </aside>
+        {% endif %}
+    </div>
+
     <footer class="footer">
         <div class="footer-box">
             <p>&copy; 2025 Gabriel Senekovic Åkerklint. All rights reserved.</p>
@@ -89,12 +96,12 @@
                 <a href="https://twitter.com/DevelopmentShou">Twitter</a> |
                 <a href="https://bsky.app/profile/shoudoesart.bsky.social">BlueSky</a> |
                 <a href="https://cupofshou.tumblr.com/">Tumblr</a> |
-                <a href="https://mastodon.social/@shoudoesart">Mastodon</a>|
+                <a href="https://mastodon.social/@shoudoesart">Mastodon</a> |
                 <a href="https://ko-fi.com/shoudoesart">Ko-Fi</a> |
                 <a href="https://www.patreon.com/c/Shou867">Patreon</a>
             </p>
         </div>
     </footer>
-
+</div>
 </body>
 </html>

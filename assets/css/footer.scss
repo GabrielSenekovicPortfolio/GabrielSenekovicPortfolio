@@ -3,6 +3,15 @@
 
 @import "{{ site.theme }}";
 
+/* Target the outer footer container from your default.html */
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centers the footer-box horizontally */
+    padding: 0 15px; /* Gives a tiny buffer from the edge of the mobile screen */
+    box-sizing: border-box;
+}
+
 .social-media a img {
     width: 30px;
     height: 30px;
@@ -11,32 +20,37 @@
 }
 
 .social-media a img:hover {
-    transform: scale(1.2); /* Slightly enlarge icon on hover */
+    transform: scale(1.2); 
 }
+
 .footer-box {
-    background-color: #69d0ff; /* Blue background color for the box */
-    border: 10px solid #5777ce; /* Pink outline */
-    border-radius: 20px; /* Curved corners */
-    padding: 20px; /* Inner padding */
-    text-align: center; /* Center text and content */
-    margin-bottom: 0px;
-    max-width: 100%; /* Adjust width as needed */
-    width: 90%; /* Ensures it is responsive */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    background-color: #69d0ff; 
+    border: 10px solid #5777ce; 
+    border-radius: 20px; 
+    padding: 20px; 
+    text-align: center; 
+    margin-bottom: 20px; /* Gives space below the box at the very bottom of the page */
+    
+    /* Responsive Layout Fixes */
+    width: 100%; 
+    max-width: 1000px; /* Keeps it matching your main-content box constraints on desktop */
+    box-sizing: border-box; /* CRITICAL: Forces border and padding inside the 100% width math */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); 
 }
+
+/* Ensure links wrap cleanly if they run out of space on tiny phone screens */
+.footer-box p {
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
 .footer-box a {
     color: var(--link-color);
     text-decoration: none;
+    display: inline-block; /* Makes them distinct hit-targets for fingers */
+    padding: 5px; /* Adds space around the links for easier mobile clicking */
 }
 
-.footer-box a:visited {
-    color: var(--link-visited);
-}
-
-.footer-box a:hover {
-    color: var(--link-hover);
-}
-
-.footer-box a:active {
-    color: var(--link-active);
-}
+.footer-box a:visited { color: var(--link-visited); }
+.footer-box a:hover { color: var(--link-hover); }
+.footer-box a:active { color: var(--link-active); }

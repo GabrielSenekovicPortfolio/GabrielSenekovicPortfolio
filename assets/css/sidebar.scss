@@ -3,73 +3,97 @@
 
 @import "{{ site.theme }}";
 
-/* Sidebar layout */
+/* --- MOBILE DEFAULT STYLES (Drawer Hidden by Default) --- */
 .sidebar {
     position: fixed;
-    right: 0;
     top: 0;
+    right: -270px; /* Hidden completely off-screen (width + border width) */
     width: 250px;
     height: 100vh;
     background-color: #99417e;
-    padding-top: 100px;
+    padding: 80px 20px 20px 20px; /* Adjusted top padding to clear menu/toggle buttons */
     text-align: center;
     border-left: 10px solid #e7ff8f;
     overflow-y: auto;
     box-sizing: border-box;
+    z-index: 2000; /* Stays floating safely on top of everything, including sticky navbars */
+    transition: right 0.3s ease-in-out; /* Smooth sliding slide-in effect */
 }
 
+/* Slide in when active toggle class is applied by JavaScript */
+.sidebar.open {
+    right: 0;
+}
+
+/* Mobile Toggle Menu Button */
+.sidebar-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #99417e;
+    border: 3px solid #e7ff8f;
+    color: #ffffff;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 2001; /* Sits higher than the drawer wrapper */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* --- LEAVE YOUR FUNCTIONAL ENGINE LOGIC UNTOUCHED --- */
 .year-toggle {
     cursor: pointer;
     background-color: #6f2659;
     font-weight: bold;
     margin-bottom: 10px;
-    padding: 5px; /* Adds spacing around the text */
-    display: block; /* Ensures it's treated as a block element */
+    padding: 5px; 
+    display: block; 
     color: #ffffff;
 }
 
-/* Month toggle button */
 .month-toggle {
     cursor: pointer;
     font-weight: bold;
-    display: block; /* Ensures it's treated as a block element */
+    display: block; 
     color: #ffffff;
 }
 
-/* Hide months and posts by default */
 .month-list {
-    display: none; /* Ensure all months are visible */
+    display: none; 
     text-align: left;
 }
 
-.post-list-retractable { //For sidebar
+.post-list-retractable { 
     display: none;
 }
 
-.post-list{ //For main page
-    display:block !important;
+.post-list { 
+    display: block !important;
 }
+
 .post-list li {
-    margin-bottom: 0em; /* Try 0.3em or even 0 if you want them tight */
+    margin-bottom: 0em; 
     padding: 0;
     text-align: left;
 }
+
 .post-list h3 {
     margin: 0;
     padding: 0;
-    line-height: 1.2; /* Tighter line height */
+    line-height: 1.2; 
 }
 
-/* Show months or posts when the class is applied */
 .month-list.show,
 .post-list-retractable.show {
     display: block;
 }
 
-/* Sidebar styling */
 .sidebar h2 {
     font-size: 1.5em;
     margin-top: 0;
+    color: #ffffff;
 }
 
 .sidebar ul {
@@ -81,7 +105,6 @@
     margin-bottom: 10px;
 }
 
-/* Links styling */
 .sidebar a {
     text-decoration: none;
     color: #ffffff;
@@ -91,7 +114,6 @@
     text-decoration: underline;
 }
 
-/* Month group styling */
 .month-group {
     margin-left: 20px;
 }
@@ -103,4 +125,25 @@
 .month-group ul {
     list-style-type: disc;
     margin-left: 20px;
+}
+
+
+/* --- DESKTOP VIEW OVERRIDES (Restores your perfect original look) --- */
+@media (min-width: 768px) {
+    /* Hide the mobile launcher toggle button */
+    .sidebar-toggle-btn {
+        display: none !important;
+    }
+
+    .sidebar {
+        position: fixed; /* Put it back where it was */
+        right: 0;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        padding-top: 100px; /* Restore desktop spacing */
+        border-left: 10px solid #e7ff8f;
+        /* Negate mobile transitional properties */
+        transition: none; 
+    }
 }

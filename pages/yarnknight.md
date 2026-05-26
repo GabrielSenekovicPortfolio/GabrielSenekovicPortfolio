@@ -1,10 +1,15 @@
 <div class="content-box">
-    <img src="{{ site.baseurl }}/assets/images/Yarn Knight/Title.png" alt="Yarn Knight Logo">
+    <img src="{{ site.baseurl }}/assets/images/Yarn Knight/Logo.png" alt="Yarn Knight Logo">
+    <!-- Maintenance Notice Alert -->
+    <br><br>
+<div style="background-color: #ffebee; border: 3px solid #d32f2f; color: #d32f2f; border-radius: 10px; padding: 15px; margin-bottom: 25px; font-weight: bold; text-align: center; font-size: 1.1em;">
+    ⚠️ This page is currently under maintenance. New information will be added soon. Note that the itch.io page is outdated.
+</div>
     <h2>Description</h2>
     <div>Yarn Knight was a project that started as an entry for a Game Jam, where I wanted to experiment with programming concepts I hadn’t had a chance to delve deeper into previously, such as lambda functions and switch expressions. I also wanted to try to make a smaller concept than previously that would be easy to “finish” as well as easily expandable in case I so wished.
-
+<br><br>
 I also looked further into Unity’s shader graph, and made both the vignette “in and out” effect when you win a level, as well as a palette swap shader, the effects of which you can witness as you go between worlds.
-
+<br><br>
 Having an interest in Binding of Isaac, a twin stick shooter was something I was interested in tackling eventually, so this is my own example of this genre.
 <br><br>
 </div>

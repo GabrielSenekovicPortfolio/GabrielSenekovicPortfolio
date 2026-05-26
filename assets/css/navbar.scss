@@ -5,13 +5,23 @@
 
 .navbar {
     overflow: visible;
-    background-color: #419995; /* Dark background */
+    background-color: #419995; 
     border-bottom: 10px solid #e7ff8f;
-    position: fixed; /* Stays at the top of the page */
+    
+    /* FIX: Changed from fixed to sticky */
+    position: sticky; 
     top: 0;
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensure navbar is on top */
-    height: 60px; /* Set a specific height for the navbar */
+    width: 100%; 
+    z-index: 1000; 
+    
+    /* Mobile Updates */
+    min-height: 60px; 
+    height: auto; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center;
+    box-sizing: border-box;
 }
 
 /* Navbar links */
@@ -19,13 +29,29 @@
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 14px 20px;
+    padding: 10px 15px; 
     text-decoration: none;
-    font-size: 17px;
+    font-size: 16px; 
+    white-space: nowrap; 
 }
 
 /* Change color on hover */
 .navbar .nav-item:hover {
     background-color: #692954;
     color: rgb(255, 255, 255);
+}
+
+/* Desktop Layout Overrides */
+@media (min-width: 768px) {
+    .navbar {
+        height: 60px; 
+        flex-wrap: nowrap;
+        justify-content: flex-start; 
+        padding-left: 20px;
+    }
+    
+    .navbar .nav-item {
+        padding: 14px 20px; 
+        font-size: 17px;
+    }
 }

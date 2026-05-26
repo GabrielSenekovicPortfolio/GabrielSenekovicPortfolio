@@ -15,3 +15,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("sidebarToggle");
+    const sidebar = document.getElementById("blogSidebar");
+
+    if (toggleBtn && sidebar) {
+        toggleBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            sidebar.classList.toggle("open");
+            
+            // Swap button visuals dynamically depending on states
+            if (sidebar.classList.contains("open")) {
+                toggleBtn.textContent = "❌ Close";
+            } else {
+                toggleBtn.textContent = "📂 Entries";
+            }
+        });
+
+        // Close sidebar if user clicks anywhere outside of the drawer area
+        document.addEventListener("click", function (e) {
+            if (!sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
+                sidebar.classList.remove("open");
+                toggleBtn.textContent = "📂 Entries";
+            }
+        });
+    }
+});
