@@ -1,0 +1,29 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.maintenance-banner {
+    background-color: #ffebee;
+    border: 3px solid #d32f2f;
+    color: #d32f2f;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.game-info-box {
+    background-color: hsl(45, 100%, 93%);
+    border: 5px solid #5777ce;
+    color: #5777ce;
+    border-radius: 10px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.game-info-box li {
+    margin-left: -15px;
+}

@@ -5,6 +5,10 @@ title: Play Chess
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/chess.scss">
 
+<div class="maintenance-banner">
+    ⚠️ This page is currently under maintenance. Perhaps the bugs are clear ;)
+</div>
+
 <div id="gameWindow">
     <div class="board-layout">
         <div class="side-panel left">

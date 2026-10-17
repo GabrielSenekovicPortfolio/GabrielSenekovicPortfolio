@@ -1,0 +1,3 @@
+<div class="maintenance-banner">
+    ⚠️ This page is currently under maintenance. New information will be added soon. Note that the itch.io page is outdated.
+</div>
