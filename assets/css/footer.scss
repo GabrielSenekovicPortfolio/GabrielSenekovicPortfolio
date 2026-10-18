@@ -7,11 +7,29 @@
 .footer {
     width: 100%;
     display: flex;
-    justify-content: center; /* Centers the footer-box horizontally */
-    padding: 0 15px; /* Gives a tiny buffer from the edge of the mobile screen */
+    justify-content: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.footer.has-sidebar {
+    width: 100%;
     box-sizing: border-box;
 }
 
+@media (min-width: 768px) {
+    .footer.has-sidebar {
+        padding-left: 250px;
+        padding-right: 290px + 250px; 
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer.has-sidebar .footer-box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
 .social-media a img {
     width: 30px;
     height: 30px;
@@ -24,18 +42,16 @@
 }
 
 .footer-box {
-    background-color: #69d0ff; 
-    border: 10px solid #5777ce; 
-    border-radius: 20px; 
-    padding: 20px; 
-    text-align: center; 
-    margin-bottom: 20px; /* Gives space below the box at the very bottom of the page */
-    
-    /* Responsive Layout Fixes */
-    width: 100%; 
-    max-width: 1000px; /* Keeps it matching your main-content box constraints on desktop */
-    box-sizing: border-box; /* CRITICAL: Forces border and padding inside the 100% width math */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); 
+        background-color: #69d0ff;
+    border: 10px solid #5777ce;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Ensure links wrap cleanly if they run out of space on tiny phone screens */

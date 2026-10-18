@@ -1,17 +1,13 @@
 <div class="content-box">
     <div class="game-header-flex">
         <img src="{{ site.baseurl }}/assets/images/Yarn Knight/Logo.png" alt="Yarn Knight Logo" class="lone-image">
-        <div class="game-info-box">
-        <div>Yarn Knight</div>
-        <div>━━━━━━━━━━━━━━━━</div>
-            <ul>
-                <!--<li><a href="https://shoudoesgames.itch.io/yarn-knight" target="_blank" rel="noopener noreferrer">A link to the itch.io page</a></li>-->
-                <li><a href="https://www.youtube.com/watch?v=AAooq-odIcg&list=PLWdF4tEc0GTf3l0gjMZCboFKBoU5kGWx5">Concept Trailer</a></li>
-                <li><a href="{{ site.baseurl }}/pages/yarnknight_versionhistory.html">Version History</a></li>
-                <li><a href="{{ site.baseurl }}/tags/yarnknight.html">Blog posts</a></li>
-            </ul>
+        {% include game_infobox.html 
+            title="Yarn Knight" 
+            slug="yarnknight" 
+            tiktok="https://www.tiktok.com/@yarnknightarcade?lang=en"
+            trailer_url="https://www.youtube.com/watch?v=AAooq-odIcg&list=PLWdF4tEc0GTf3l0gjMZCboFKBoU5kGWx5" 
+        %}
         </div>
-    </div>
     <h2>Description</h2>
     <div>Yarn Knight is a twin-stick shooter arcade roguelike where you play as Charlie, a feline traveller from a far away land. Yanzhèn, who can turn into a pink gun that shoots yarnballs, accompanies him on a journey that will take him across 13 different lands where he must convene with their elements and stop a prophecy that has predicted the end of Torusworld.</div>
     <br><br>

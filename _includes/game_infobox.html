@@ -1,0 +1,22 @@
+<div class="game-info-box">
+  <div class="game-title">{{ include.title }}</div>
+  <div class="divider">━━━━━━━━━━━━━━━━</div>
+  <ul>
+    {% if include.itch_url %}
+      <li><a href="{{ include.itch_url }}" target="_blank" rel="noopener noreferrer">itch.io</a></li>
+    {% endif %}
+
+    {% if include.trailer_url %}
+      <li><a href="{{ include.trailer_url }}" target="_blank" rel="noopener noreferrer">Concept Trailer</a></li>
+    {% endif %}
+
+    {% if include.tiktok %}
+      <li><a href="{{ include.tiktok }}" target="_blank" rel="noopener noreferrer">Tiktok</a></li>
+    {% endif %}
+
+    {% if include.slug %}
+      <li><a href="{{ site.baseurl }}/tags/{{ include.slug }}.html">Blog posts</a></li>
+      <li><a href="{{ site.baseurl }}/pages/{{ include.slug }}_versionhistory.html">Version History</a></li>
+    {% endif %}
+  </ul>
+</div>

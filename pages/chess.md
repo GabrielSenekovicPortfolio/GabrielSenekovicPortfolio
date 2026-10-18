@@ -3,7 +3,7 @@ layout: default
 title: Play Chess
 ---
 
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/chess.scss">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/chess.css">
 
 <div class="maintenance-banner">
     ⚠️ This page is currently under maintenance. Perhaps the bugs are clear ;)

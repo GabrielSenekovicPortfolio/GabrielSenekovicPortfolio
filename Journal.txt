@@ -1,0 +1,12 @@
+This txt file is here to document my journey learning about 
+HTML, CSS, Javascript and Jekyll, as well as how to make a website in general.
+
+18/10/2026
+I created this txt file. I was surprised that this project didn't already have a journal file, 
+since I am usually of that habit. I need to be able to document what I have learned in a way that
+I can look back on, and to show whoever sees this repository that I have indeed learned how all of
+this works, and that it isn't just copy pasted slop. Today, I am intending to learn about "slugs" 
+and _includes. Before today, this project did not have an _includes folder at all.
+_includes holds HTML snippets and components. It has templates and stuff that I'd want to reuse in 
+several places. A slug is a human readabe, URL safe version of a name or title. A slug can contain
+ampersands, colons and exclamation points etc.

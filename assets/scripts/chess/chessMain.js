@@ -4,6 +4,22 @@ const gameBoard = document.querySelector("#gameboard")
 const playerDisplay = document.querySelector("#player")
 const infoDisplay = document.querySelector("#info-display")
 
+/*
+Rules missing:
+Check, Checkmate, King safety
+Castling
+En Passant
+Pawn Promotion
+Stalemate
+
+Bugs:
+Pawn can move two squares even if the square is occupied
+Diagonal pawn capture can wrap around the board
+Knights can do illegal jumps
+All pieces mishandle 0
+No game ending
+*/
+
 const width = 8;
 let playerGo = 'blackPiece'
 playerDisplay.textContent = 'black'

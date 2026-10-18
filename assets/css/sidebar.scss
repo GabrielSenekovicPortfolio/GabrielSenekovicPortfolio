@@ -3,7 +3,6 @@
 
 @import "{{ site.theme }}";
 
-/* --- MOBILE DEFAULT STYLES (Drawer Hidden by Default) --- */
 .sidebar {
     position: fixed;
     top: 0;
@@ -127,8 +126,27 @@
     margin-left: 20px;
 }
 
+.month-box {
+    background-color: #b2f6ff; 
+    border-radius: 20px; 
+    padding: 10px;
+    padding-left: 10px;
 
-/* --- DESKTOP VIEW OVERRIDES (Restores your perfect original look) --- */
+    text-align: left; 
+    width: 100%;
+    max-width: 100%; 
+    box-sizing: border-box;
+}
+.month-box a
+{
+    color:#6f2659;
+}
+.month-box ul
+{
+    color:#6f2659;
+}
+
+
 @media (min-width: 768px) {
     /* Hide the mobile launcher toggle button */
     .sidebar-toggle-btn {
