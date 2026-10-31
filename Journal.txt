@@ -10,3 +10,17 @@ and _includes. Before today, this project did not have an _includes folder at al
 _includes holds HTML snippets and components. It has templates and stuff that I'd want to reuse in 
 several places. A slug is a human readabe, URL safe version of a name or title. A slug can contain
 ampersands, colons and exclamation points etc.
+
+I've also made folders for different coding languages that I want to put into the browser, just like
+chess. Lua can be inserted by embedding a PICO-8 cartridge or using Fengari. 
+Rust can be inserted using wasm-bindgen. Mind you I'm skimming these so the hierarchy might not be
+correct. Python can be inserted using PyScript. C sharp can be inserted using Blazor Wasm. Cpp can
+be inserted using something simple like SDL2 and compiling with Emscripten. Ruby can be inserted using Opal
+or ruby.wasm. Basically, there seem to be OK ways to do it for each of these languages that I've used
+before, and I think it would be fun to display them myself here. I could even move over my C project
+that used chinese characters as level objects in a roguelike.
+
+31/10/2026
+Writing the blog post for SGC. I got a couple of game projects I've made that lead to WIP
+pages. I think actually making those webpages might help me get a better chance at a job...
+Maybe...

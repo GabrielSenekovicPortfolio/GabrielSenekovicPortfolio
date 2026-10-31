@@ -58,10 +58,13 @@ function createBoard()
     startPieces.forEach((startPiece, i) =>
     {
         const square = document.createElement('div')
+        
         square.classList.add('square')
+        square.setAttribute('draggable', 'false');
         square.innerHTML = startPiece;
         square.firstElementChild?.setAttribute('draggable', 'true');
         square.setAttribute('square-id', i.toString())
+
         const row = Math.floor((63 - i) / 8) + 1
         if(row % 2 === 0)
         {
@@ -103,7 +106,17 @@ let startPositionId
 let draggedElement
 
 function dragStart(e) {
-    const isCorrectPlayer = e.target.firstChild?.classList.contains(playerGo);
+
+    const square = e.target.closest('.square');
+    const piece = square.firstElementChild;
+
+    if (!piece) {
+        e.preventDefault();
+        return;
+    }
+
+    const isCorrectPlayer = piece.firstElementChild?.classList.contains(playerGo) || 
+                            piece.classList.contains(playerGo);
 
     if (!isCorrectPlayer) {
         e.preventDefault(); // Stop the drag from happening
@@ -113,7 +126,7 @@ function dragStart(e) {
     }
 
     startPositionId = e.target.parentNode.getAttribute('square-id');
-    draggedElement = e.target;
+    draggedElement = piece;
     
     const opponentGo = playerGo === 'whitePiece' ? 'blackPiece' : 'whitePiece';
     
@@ -158,7 +171,8 @@ function dragDrop(e)
     const takenByOpponent = existingPiece?.firstChild?.classList.contains(opponentGo);
     
     const valid = checkIfValid(targetSquare, startPositionId, width, draggedElement);
-    const correctGo = draggedElement.firstChild.classList.contains(playerGo);
+    const correctGo = draggedElement.firstElementChild?.classList.contains(playerGo) || 
+                  draggedElement.classList.contains(playerGo);
 
     if(correctGo)
     {

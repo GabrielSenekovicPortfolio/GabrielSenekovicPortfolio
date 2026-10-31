@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "SGC 2026"
+date:   2026-10-31 00:00:00 +0100
+categories: general
+sidebar: true
+markdown: kramdown
+tags: [sgc]
+---
+<div class="content-box">
+Hello!
+<br><br>
+This year, I visited the Swedish Game Conference in Skövde! I left by train on the 14th of October so I could be there ahead of time, and then stayed until saturday. The actual event lasted only from thursday to friday. The Swedish Game Conference is an annual event taking place in the game Mecca of Sweden: Skövde, where indie developers and students from the Skövde university can display their games for visitors and veterans to see and play. They also held competitions and handed out prices, and there were many talks to view.
+<br><br>
+Originally, I had hoped to show off my game Yarn Knight at the event. I applied to the Indiecator, and I worked really hard for a few weeks trying to get a demo as finished as possible for the event. However, a little over a month before the event, I found out that my application was denied.
+<br><br>
+Instead, I was contacted by Limbo. I am surprised that I didn't write a blog post earlier this year when I went with Limbo to Pocket Gamer Connect Malmö. Limbo is a project by Skövde University's Drivhuset, with the mission to help young game developers that struggle to get into the industry. Particularly neurodivergent developers, which I fit into, considering I have ADHD. Limbo has been a HUGE help. At PGC 2026 I got to go to my first mixer, and now again in Skövde. I get to network with people in the industry, getting my name out there. After graduating from Uppsala University, I haven't had a proper game community anymore. Thanks to Limbo financing large parts of my visits to these events, I have gotten a second chance.
+<br><br>
+I hope that next year, I can display Yarn Knight at SGC. At that point, the demo should have a lot more content in it than I had planned for this year. I got to go around a play a lot of people's games, and I think my game would fit right into that crowd.
+<br><br>
+I wrote a LinkedIn post about my visit to SGC here: <a href= https://lnkd.in/p/eZiYsRuF target="_blank" rel="noopener noreferrer">
+<br><br>
+On the wednesday, they needed my help right off the bat, to hand out passes for people who were going to exhibit the next day. It was just for one hour, then I went out to check into my hotel on the north side of the city. The next day, I was jour several times. That meant I had to be aware of what was going on in a discord server where exhibitants could ask questions, and answer if needed. I helped people by guarding their desks, but for the most part it was quiet. I also spent my lunchtime pretending I was a student too, visiting the local popular restaurants such as Spice & Rice, and SushiYaki. The ramen at SushiYaki was very good.
+<br><br>
+By chance, I met the man responsible for the Game department in Visby, Jacob, and he told me about Spawnpoint. Spawnpoint is part of Visby science park. They're finally trying to actually help the developer community around that university, which means I might have a chance to get help from them too. I had a talk with one of the people responsible for the project, which was quite intimidating. It seems your company must be registered on the island, and I wasn't able to answer what kind of help I actually wanted. I guess I need to have a proper plan and understanding of what the science park can do first.
+<br><br>
+Besides that, I met a lot of fun people for the first time, such as Zahrah Isaacs on the friday evening at the game pub. She was a lot of fun, asking me and my friend Lovisa a lot of questions. I also met a teacher named Yolanda, who didn't have a LinkedIn so I couldn't connect with her. Then there were two teachers from Hola folkhögskola, who recommended their education. One of these men had a supercool beard and moustache, and a cylindrical hat. No way I'm going to forget that anytime soon!
+<br><br>
+I look forward to going to many more such events in the future, but for now I must look forward to Christmas and New Years! 
+<br><br>
+PS: I can't believe I haven't actually written a new blog post all year? I've been so busy with mandatory activities that Swedish Arbetsförmedlingen want me to do, and then trying to do coding on Yarn Knight on the side all year that I haven't found any time for this website at all! Which is unfortunate, considering this is my whole portfolio website.
+</div>

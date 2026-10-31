@@ -6,7 +6,7 @@ title: Play Chess
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/chess.css">
 
 <div class="maintenance-banner">
-    ⚠️ This page is currently under maintenance. Perhaps the bugs are clear ;)
+    ⚠️ This page is currently under maintenance. Features missing
 </div>
 
 <div id="gameWindow">
@@ -25,5 +25,5 @@ title: Play Chess
     <p id="info-display"></p>
 </div>
 
-<script src="{{ site.baseurl }}/assets/scripts/chess/chessPieces.js"></script>
-<script type="module" src="{{ site.baseurl }}/assets/scripts/chess/chessMain.js"></script>
+<script src="{{ site.baseurl }}/assets/scripts/Javascript/chess/chessPieces.js"></script>
+<script type="module" src="{{ site.baseurl }}/assets/scripts/Javascript/chess/chessMain.js"></script>
