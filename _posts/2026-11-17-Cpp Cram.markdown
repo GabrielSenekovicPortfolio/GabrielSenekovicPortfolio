@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "CPP Cram"
+date:   2026-11-17 00:00:00 +0100
+categories: general
+sidebar: true
+markdown: kramdown
+tags:
+---
+<div class="content-box" markdown="1">
+A week ago or so, a recruiter contacted me on LinkedIn about an opportunity. She wanted to have a talk to me about the expectations, and whether I wanted to speak to the lead programmer of the project. It was regarding a realtime video call software, something I must admit I did not have much experience in. The job listing sent to me did not demand it however, only skills with C++.
+
+C++ is a programming language I have some history with. I first learned it back in university, where we took several courses in things such as rapid prototyping, realtime graphics and data containers amongst other things. For the second C++ course we had, I made a short Super Mario clone. I was only one point short of a Pass with Distinction (I had quite a large beef with the way PwD was set up for the education), but I was very impressed with what I accomplished. I learned that the C++ that we learned was quite old, however. Modern C++ often looked very different.
+
+When I had my internship at King, I did some work in C++. That's when I first got to saw how different modern C++ could look. It was practically a different programming language from what we had learned. We didn't even touch templates, nor did we learn about design patterns, smart pointers or multithreading.
+
+Over the years, I've taught myself those things. Since I left King in February 2023, I've dived into asyncronous coding, SOLID design principles, the 23 design patterns as defined in "Design Patterns: Elements of Reusable Object-Oriented Software (1994)" amongst other concepts, trying to deepen my understanding of not only C++, but C# and other coding languages I dipped my toes in. I can now say with confidence that I have a grasp on these concepts, and I've applied what I've learned when working on my game <a href="{{ site.baseurl }}/pages/eschaton.html">Eschaton</a>. Perhaps I should prepare a public repo of parts of Eschaton to show it off?
+
+So anyway, when I looked over the job listing, it said I should have deep C++ knowledge. "Oh snap" I thought. What does that mean?
+
+So I googled around, and found out about even more patterns and concepts that I hadn't used before. Std::variant, PIMPL, SISD and SIMD, Atomic variables, Mutex and Type erasure are some examples. I practiced with these, as well as Curiously Recursive Template pattern, which I had independently discovered while working on Eschaton. I then coded a Jitter buffer and a SPSC ring in anticipation of the coding test the coding lead would host for me. I had no idea what I was to expect, if it was a basic custom implementation of RAII or something more advanced. I spent over a week practicing and reading theory.
+
+In the end, the test turned out to be opening NotePad and write a function that counts words in a sentence. I was a bit miffed, not going to lie. I'd have to code without intellisense, and something so simple? For some reason, I insisted on writing a foreach loop, which I had forgotten the syntax to. I had not focused on the absolute basics at all during this time. He said it was OK to ask, so I did. Then he asked me to consider an edge case, and I coded for that too.
+
+And it went well! I only needed a reminder that you place a colon instead of "in" when making a foreach loop in C++ compared to C#. Turns out however, that I didn't move on to the next interview for that reason alone.
+
+After spending so much time deep diving into the nitty gritty of C++, it was a simple question that ruined my chances. While it does feel like some sort of cruel joke, I now know that I may be asked to code without intellisense, which was not on my bingo card. Out of the few interviews I've had, only about 5 in the span of 3 years, I've only gotten "homework" to do. For King, I did code a program in the browser, but it still had intellisense.
+
+There's all kinds, I guess.
+
+All is not lost, of course. The time was not wasted. I still learned a lot of things, and I can cope by putting what I've learned into Eschaton some time. I am still busy with developing Yarn Knight, and I'm about to make a new comic for the Nosebleed studio competition, but I have a lot of ideas how to circle back all my research into my work. And if nothing else, I may be more prepared next time.
+</div>
